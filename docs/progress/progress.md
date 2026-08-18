@@ -25,4 +25,33 @@ PAY-001 — Project Initialization
 
 ### Next Ticket
 
-PAY-002 — Create User Service
+---
+
+## PAY-002 — User Service
+
+### Status
+
+🚧 In Progress
+
+### Current Phase
+
+Service Design
+
+### Responsibility
+
+The User Service is responsible for managing PayFlow users
+and owning user-related data.
+
+### Planned Work
+
+- [ ] Create Spring Boot project
+- [ ] Configure MySQL database
+- [ ] Create User entity
+- [ ] Create repository
+- [ ] Create service layer
+- [ ] Create REST controller
+- [ ] Add request validation
+- [ ] Add exception handling
+- [ ] Add unit tests
+- [ ] Document APIs
+- [ ] Create Pull Request
