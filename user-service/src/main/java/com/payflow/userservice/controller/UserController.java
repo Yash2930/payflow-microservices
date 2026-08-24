@@ -49,6 +49,11 @@ public class UserController {
         return  ResponseEntity.status(HttpStatus.OK).body(user);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deactivateUser(@PathVariable Long id){
+        userService.deactivateUser(id);
+        return ResponseEntity.ok("User deactivated successfully");
+    }
 
 
 
