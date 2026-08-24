@@ -43,6 +43,11 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
 
+         if(!user.isActive()){
+             throw new UserNotFoundException("User not found with id: " + id);
+         }
+
+
         return modelMapper.map(user,UserResponse.class);
     }
 
@@ -51,6 +56,10 @@ public class UserServiceImpl implements UserService {
 
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
+
+        if(!user.isActive()){
+            throw new UserNotFoundException("User not found with id: " + id);
+        }
 
         modelMapper.map(userRequest,user);
 
